@@ -710,7 +710,7 @@ footer .social a:hover {
 
 .product-video {
     width: 100%;
-    max-width: 800px;
+    max-width: 250px;
     margin: 20px auto;
     display: block;
     border-radius: 10px;
@@ -826,15 +826,23 @@ footer .social a:hover {
     max-width: 100%; /* Đảm bảo các phần tử trong reviews không vượt quá chiều rộng của reviews */
 }
 
+.video-review {
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Sắp xếp các phần tử theo cột */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
 .video-review video {
     width: 100%;
-    max-width: 600px; /* Tăng độ rộng tối đa cho video */
+    max-width: 200px; 
     border-radius: 10px;
+    display: block; /* Đảm bảo video chiếm toàn bộ chiều rộng của container cha */
 }
 
 .video-review p {
     margin-top: 10px;
     font-size: 1rem;
+    text-align: center; /* Căn giữa văn bản */
 }
 
 .text-review .review {
@@ -844,12 +852,13 @@ footer .social a:hover {
     max-width: 90%;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center
 }
 
 .text-review .review p {
     margin: 5px 0;
+    text-align: center
 }
-
 @media (max-width: 600px) {
     .video-review video,
     .text-review .review {
